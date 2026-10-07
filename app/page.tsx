@@ -15,6 +15,7 @@ export default function Home() {
         <nav className="nav" aria-label="Main">
           <a href="#about">About</a>
           <a href="#books">Books</a>
+          <a href="#newsletter">Newsletter</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -100,6 +101,24 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section id="newsletter" className="newsletter">
+          <div className="wrap">
+            <h2>Newsletter</h2>
+            <p>News about new books and audiobooks, sent to you by email.</p>
+            <div className="actions">
+              <a
+                className="button"
+                href={
+                  site.newsletterUrl ||
+                  `mailto:${site.email}?subject=${encodeURIComponent("Newsletter signup")}`
+                }
+              >
+                Join the newsletter
+              </a>
+            </div>
           </div>
         </section>
       </main>

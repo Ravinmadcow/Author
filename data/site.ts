@@ -8,5 +8,8 @@ export const site = {
     "I have travelled all over the UK and other countries. I enjoy cycling and walking, but my main hobby is gaming with my family and friends. I love immersing myself in a wonderful story and exciting plot. I draw inspiration from the games I play and all the experiences life throws at me. When I discovered writing, it was another way to give my imagination free rein.",
   ] as string[],
   email: "cgbwriter@hotmail.com",
+  // Signup page from a newsletter service (Mailchimp, MailerLite, Substack...).
+  // While it is empty, the newsletter button opens an email to the address above.
+  newsletterUrl: "",
   socials: [] as { label: string; url: string }[],
 };

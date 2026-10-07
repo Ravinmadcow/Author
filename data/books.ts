@@ -8,11 +8,14 @@ export type Book = {
   height: number;
   blurb?: string;
   buyUrl?: string;
+  audiobookUrl?: string;
 };
 
 // The covers are temporary crops from the banner. Replace the files in
 // public/images/ with full-size covers (and update width/height to match).
-// Fill in blurb and buyUrl for each book; the page shows them once set.
+// Set buyUrl to each book's shop page. While it is empty, the buy button
+// goes to an Amazon UK search for the title. The audiobook button only
+// shows for books that have an audiobookUrl.
 // A blank line in a blurb starts a new paragraph.
 export const books: Book[] = [
   {
@@ -30,7 +33,8 @@ When her father is killed tragically in Afghanistan, 17-year-old Christine finds
 Christine’s mother does not support her decision to become an army medic, but that is hardly the only problem Christine is facing. Shy and reserved by nature, she has a difficult time bonding with her comrades, including the only other female soldier in her squadron.
 
 As Christine struggles with social anxiety and her faith in God, she embarks on a mission to uncover the circumstances of her father’s heroic death.`,
-    buyUrl: "",
+    buyUrl: "https://www.amazon.co.uk/dp/B09H5WCL6V",
+    audiobookUrl: "https://www.audible.co.uk/pd/How-Do-Soldiers-Cry-Audiobook/B0BWH3HMJF",
   },
   {
     slug: "one-way-ticket",
@@ -57,7 +61,8 @@ As Christine struggles to come to terms with her mother’s new relationship, th
 Has her entire life been a lie fabricated to protect her?
 
 By the time this war is over, Christine will find out what she’s lost and won.`,
-    buyUrl: "",
+    buyUrl: "https://www.amazon.co.uk/dp/B0B65SFKQV",
+    audiobookUrl: "https://www.audible.co.uk/pd/One-Way-Ticket-Audiobook/B0D1DSN8S6",
   },
   {
     slug: "reasons-to-live",
@@ -82,7 +87,8 @@ Will she finally acknowledge her true feelings and get the help she desperately 
 Maybe the veteran she just met at the motel is right.
 
 Christine might be a fighter, but a good fighter knows when it’s time to let go…`,
-    buyUrl: "",
+    buyUrl: "https://www.amazon.co.uk/dp/B0D156MF2V",
+    audiobookUrl: "https://www.audible.co.uk/pd/Reasons-to-Live-Audiobook/B0D344GYW2",
   },
   {
     slug: "seer-of-prophecy",
@@ -104,6 +110,6 @@ The answer comes in the form of a suspicious client, a lying goblin who tricks h
 Attracted by Seraphina’s newfound powers, three dragons, Frostbite, Ember, and Stormrider, sneak through the portal to find her and put an end to the goblins’ undying thirst for power. In order to stop the goblins, humans and dragons must form an unprecedented alliance and win a battle that has been secretly raging for centuries.
 
 The key to their success? Seraphina herself…`,
-    buyUrl: "",
+    buyUrl: "https://www.amazon.co.uk/dp/B0GLQ6PYJT",
   },
 ];

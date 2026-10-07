@@ -2,6 +2,12 @@ import Image from "next/image";
 import { books } from "../data/books";
 import { site } from "../data/site";
 
+// Used until a book has its own buyUrl in data/books.ts.
+function amazonSearch(title: string) {
+  const query = encodeURIComponent(`${title} ${site.author}`);
+  return `https://www.amazon.co.uk/s?k=${query}`;
+}
+
 export default function Home() {
   return (
     <>
@@ -80,11 +86,16 @@ export default function Home() {
                     ) : (
                       <p className="pending">Blurb coming soon.</p>
                     )}
-                    {book.buyUrl && (
-                      <a className="button" href={book.buyUrl}>
+                    <div className="actions">
+                      <a className="button" href={book.buyUrl || amazonSearch(book.title)}>
                         Buy {book.title}
                       </a>
-                    )}
+                      {book.audiobookUrl && (
+                        <a className="button secondary" href={book.audiobookUrl}>
+                          Get the audiobook
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </li>
               ))}

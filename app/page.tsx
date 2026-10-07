@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <header className="hero">
         <nav className="nav" aria-label="Main">
-          <a href="#books">Books</a>
           <a href="#about">About</a>
+          <a href="#books">Books</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -35,39 +35,6 @@ export default function Home() {
       </header>
 
       <main>
-        <section id="books" className="books">
-          <div className="wrap">
-            <h2>Books</h2>
-            <ul className="book-list">
-              {books.map((book) => (
-                <li key={book.slug} id={book.slug} className="book">
-                  <Image
-                    src={book.cover}
-                    alt=""
-                    width={book.width}
-                    height={book.height}
-                  />
-                  <div>
-                    <h3>{book.title}</h3>
-                    {book.blurb ? (
-                      book.blurb
-                        .split(/\n\s*\n/)
-                        .map((paragraph) => <p key={paragraph}>{paragraph}</p>)
-                    ) : (
-                      <p className="pending">Blurb coming soon.</p>
-                    )}
-                    {book.buyUrl && (
-                      <a className="button" href={book.buyUrl}>
-                        Buy {book.title}
-                      </a>
-                    )}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
         <section id="about" className="about">
           <div className="wrap about-grid">
             <Image
@@ -86,6 +53,42 @@ export default function Home() {
                 <p className="pending">Bio coming soon.</p>
               )}
             </div>
+          </div>
+        </section>
+
+        <section id="books" className="books">
+          <div className="wrap">
+            <h2>Books</h2>
+            <ul className="book-list">
+              {books.map((book) => (
+                <li key={book.slug} id={book.slug} className="book">
+                  <Image
+                    src={book.cover}
+                    alt=""
+                    width={book.width}
+                    height={book.height}
+                  />
+                  <div>
+                    <h3>{book.title}</h3>
+                    <p className="meta">
+                      {book.series ? `${book.series}, ${book.year}` : book.year}
+                    </p>
+                    {book.blurb ? (
+                      book.blurb
+                        .split(/\n\s*\n/)
+                        .map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+                    ) : (
+                      <p className="pending">Blurb coming soon.</p>
+                    )}
+                    {book.buyUrl && (
+                      <a className="button" href={book.buyUrl}>
+                        Buy {book.title}
+                      </a>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       </main>

@@ -1,6 +1,8 @@
 export type Book = {
   slug: string;
   title: string;
+  series?: string;
+  year: number;
   cover: string;
   width: number;
   height: number;
@@ -14,8 +16,54 @@ export type Book = {
 // A blank line in a blurb starts a new paragraph.
 export const books: Book[] = [
   {
+    slug: "how-do-soldiers-cry",
+    title: "How Do Soldiers Cry",
+    series: "Tour of Scars",
+    year: 2021,
+    cover: "/images/how-do-soldiers-cry.png",
+    width: 293,
+    height: 354,
+    blurb: `The war at home is harder to win.
+
+When her father is killed tragically in Afghanistan, 17-year-old Christine finds herself deserted in her own family. Devastated by grief and unable to form a real connection with her mother, she decides to take the only path she knows: the one her father forged in the army.
+
+Christine’s mother does not support her decision to become an army medic, but that is hardly the only problem Christine is facing. Shy and reserved by nature, she has a difficult time bonding with her comrades, including the only other female soldier in her squadron.
+
+As Christine struggles with social anxiety and her faith in God, she embarks on a mission to uncover the circumstances of her father’s heroic death.`,
+    buyUrl: "",
+  },
+  {
+    slug: "one-way-ticket",
+    title: "One Way Ticket",
+    series: "Tour of Scars",
+    year: 2022,
+    cover: "/images/one-way-ticket.png",
+    width: 304,
+    height: 410,
+    blurb: `There’s no fight like the one inside.
+
+Christine discovers this the hard way right after her passing out parade, when her estranged mother Isabelle gives her a mysterious letter.
+
+Despite her burning need to know the truth about her past, Christine refuses to read it.
+
+Instead, she immerses herself in her combat medic training and forms a strong bond with Andi, a quick-witted female medic with way more life experiences than Christine herself.
+
+Passing her medic’s exam and reuniting with her squadron, including Ben, makes Christine feel useful again, but her grandmother’s illness and their long-distance communication remain a thorn in her heart.
+
+Will her deployment to Afghanistan help her gain a new perspective, or will it only shatter her glorified idea of fighting for her country?
+
+As Christine struggles to come to terms with her mother’s new relationship, their broken connection, and a devastating loss, she finally makes the decision to read that fateful letter, only to have her world turned upside down once again…
+
+Has her entire life been a lie fabricated to protect her?
+
+By the time this war is over, Christine will find out what she’s lost and won.`,
+    buyUrl: "",
+  },
+  {
     slug: "reasons-to-live",
     title: "Reasons to Live",
+    series: "Tour of Scars",
+    year: 2024,
     cover: "/images/reasons-to-live.png",
     width: 308,
     height: 410,
@@ -39,6 +87,7 @@ Christine might be a fighter, but a good fighter knows when it’s time to let g
   {
     slug: "seer-of-prophecy",
     title: "Seer of Prophecy",
+    year: 2026,
     cover: "/images/seer-of-prophecy.png",
     width: 303,
     height: 354,
@@ -55,46 +104,6 @@ The answer comes in the form of a suspicious client, a lying goblin who tricks h
 Attracted by Seraphina’s newfound powers, three dragons, Frostbite, Ember, and Stormrider, sneak through the portal to find her and put an end to the goblins’ undying thirst for power. In order to stop the goblins, humans and dragons must form an unprecedented alliance and win a battle that has been secretly raging for centuries.
 
 The key to their success? Seraphina herself…`,
-    buyUrl: "",
-  },
-  {
-    slug: "how-do-soldiers-cry",
-    title: "How Do Soldiers Cry",
-    cover: "/images/how-do-soldiers-cry.png",
-    width: 293,
-    height: 354,
-    blurb: `The war at home is harder to win.
-
-When her father is killed tragically in Afghanistan, 17-year-old Christine finds herself deserted in her own family. Devastated by grief and unable to form a real connection with her mother, she decides to take the only path she knows: the one her father forged in the army.
-
-Christine’s mother does not support her decision to become an army medic, but that is hardly the only problem Christine is facing. Shy and reserved by nature, she has a difficult time bonding with her comrades, including the only other female soldier in her squadron.
-
-As Christine struggles with social anxiety and her faith in God, she embarks on a mission to uncover the circumstances of her father’s heroic death.`,
-    buyUrl: "",
-  },
-  {
-    slug: "one-way-ticket",
-    title: "One Way Ticket",
-    cover: "/images/one-way-ticket.png",
-    width: 304,
-    height: 410,
-    blurb: `There’s no fight like the one inside.
-
-Christine discovers this the hard way right after her passing out parade, when her estranged mother Isabelle gives her a mysterious letter.
-
-Despite her burning need to know the truth about her past, Christine refuses to read it.
-
-Instead, she immerses herself in her combat medic training and forms a strong bond with Andi, a quick-witted female medic with way more life experiences than Christine herself.
-
-Passing her medic’s exam and reuniting with her squadron, including Ben, makes Christine feel useful again, but her grandmother’s illness and their long-distance communication remain a thorn in her heart.
-
-Will her deployment to Afghanistan help her gain a new perspective, or will it only shatter her glorified idea of fighting for her country?
-
-As Christine struggles to come to terms with her mother’s new relationship, their broken connection, and a devastating loss, she finally makes the decision to read that fateful letter, only to have her world turned upside down once again…
-
-Has her entire life been a lie fabricated to protect her?
-
-By the time this war is over, Christine will find out what she’s lost and won.`,
     buyUrl: "",
   },
 ];
